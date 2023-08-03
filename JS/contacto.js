@@ -1,6 +1,6 @@
 function activarBtnEnviar(){
     let form = document.querySelector('.main__contactContainer__fields')
-    form.addEventListener('submit', (e)=>{
+    form.addEventListener('submit', (e)=>{/* evento al enviar el formulario */
         e.preventDefault()
         Swal.fire({
             icon: 'success',
@@ -11,7 +11,7 @@ function activarBtnEnviar(){
             customClass: {
                 confirmButton:"btnConfirm",
             }
-        }).then(()=>{
+        }).then(()=>{/* Vacío los campos */
                 document.getElementById('nombre').value = ''
                 document.getElementById('email').value = ''
                 document.getElementById('tel').value = ''

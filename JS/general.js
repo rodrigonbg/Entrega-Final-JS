@@ -105,7 +105,7 @@ function activarBuscadorHeader(){
             if(itemsOnSale.innerHTML===''){ /* si el container de items on sale está vacío despues del filtrado, mustro un mensaje de No coincidencia */
                 itemsOnSale.innerHTML =`<div class="cardSinCoindicencias">
                                             <div class="mensaje">
-                                                <img src="../Iconos/caraTriste.png" alt="carita triste">
+                                                <img src="Iconos/caraTriste.png" alt="carita triste">
                                                 <p>No se han encontrado productos OnSale para su busqueda.</p>
                                             </div>
                                         </div>`
@@ -139,7 +139,7 @@ function activarBuscadorHeader(){
 
 function activarNewsLetterForm(){
     let form = document.getElementById('newsLetter')
-    form.addEventListener('submit', (e)=>{
+    form.addEventListener('submit', (e)=>{/* evento al envío del form */
         e.preventDefault();
         Swal.fire({
             icon: 'success',
@@ -151,7 +151,7 @@ function activarNewsLetterForm(){
                 confirmButton:"btnConfirm",
             }
         }).then(()=>{
-            document.getElementById('email').value=''
+            document.getElementById('email').value='' /* vacío el campo */
         })
     })
 }

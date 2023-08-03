@@ -102,10 +102,10 @@ function crearItems(productos){ /* funcion que crea los items en index */
 
 function cargarProductos(){
     fetch(URL)
-        .then((result)=> result.json())
-        .then((items)=> productos.push(...items))
-        .then(()=> crearItems(productos))
-        .catch(()=>{
+        .then((result)=> result.json())/* recupero el array con los productos */
+        .then((items)=> productos.push(...items))/* Cargo el array productos */
+        .then(()=> crearItems(productos))/* creo las tarjetas  */
+        .catch(()=>{/* En caso de error, retorno un mensaje  */
             let index = document.querySelector(".main__indexContainer")
             index.innerHTML = `<div class="cardSinCoindicencias">
                                     <div class="mensaje">
