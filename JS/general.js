@@ -113,7 +113,7 @@ function activarBuscadorHeader(){
             if(itemsDestacados.innerHTML===''){/* si el container de destacados está vacío despues del filtrado, mustro un mensaje de No coincidencia */
                 itemsDestacados.innerHTML =`<div class="cardSinCoindicencias">
                                                 <div class="mensaje">
-                                                    <img src="../Iconos/caraTriste.png" alt="carita triste">
+                                                    <img src="Iconos/caraTriste.png" alt="carita triste">
                                                     <p>No se han encontrado productos Destacados para su busqueda.</p>
                                                 </div>
                                             </div>`
