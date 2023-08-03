@@ -1,0 +1,437 @@
+@media (min-width:768px) or (orientation: landscape) {
+
+    .header__imgs{
+        top: 245px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:980px) { 
+    /* ----------------------------------------------------------------- */
+    /* --------------------------------------------RESPONSIVE DEL HEADER */
+    /* ----------------------------------------------------------------- */
+
+    /* ----------------------REORDENO EL GRID DEL HEADER*/
+    .header__gridContainer{
+        background-color: $primary-color;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1.2fr 2fr;
+        grid-template-areas: 
+            "headerInfo     headerImgs"
+            "headerButtons  headerImgs";
+        margin-bottom: 150px;
+        row-gap: 2%;
+    }
+
+    /* ----------------------OCULTAR BOTON DE MENU*/
+    i#menu{
+        display: none;
+    }
+
+    /* ----------------------MOSTRAR NAV*/
+    .header__menu{
+        display: block;
+    
+    }
+
+    /* ----------------------MOSTRAR BOTON DE BUSCAR*/
+    .header__searchButton{
+        display: block;
+    }
+
+    /* --------------AJUSTAR BARRA DE BUSQUEDA*/
+    .header__searchBar{
+        width: 85%;
+        order: 5;
+        margin-right: 2%;
+        padding: 5px 0;
+        &:focus{
+            width: 85%;
+        }
+    }
+
+    /* ----------------------MOSTRAR BOTON DE LOGIN*/
+    .header__loginButton{
+        display: block;
+    }
+
+    /* --------------AJUSTAR PARTE FIJA DEL HEADER*/
+    .header__fixed{
+        padding: 5px 10% 5px 10%;
+
+    }
+
+    /* ------------------AJUSTAR TEXTO DEL HEADER*/
+    .header__info{
+        @include flexCenter(column);
+        justify-content: end;
+        margin-top: 108px;
+        padding: 2% 0;
+        padding-left: 10vw;
+        height: 70%;
+    }
+
+    .header__info__tittle{
+        text-align: left;
+
+    }
+    .header__info__p {
+        text-align: left;
+        font-size: 120%;
+    }
+
+    /* --------------AJUSTAR IMAGENES DEL HEADER*/
+    .header__imgs{
+        right: 10vw;
+        width: 50%;
+        .imgs{
+            padding: 0;
+        }
+    }
+
+    /* ------------AJUSTAR BOTONES BUYNOW Y EXPLORE*/
+    .header__buttons{
+        margin-top: 3%;
+        padding: 1% 0 10% 0;
+        padding-left: 10vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+    }
+    
+    .header__ExploreButton{
+        width: 70%;
+        margin: 1% 0;
+        margin-left: 5%;
+        border:solid 1px #fff;
+        color: #fff;
+    }
+    
+    /* -------------------------BORDE DEL HEADER*/
+    .header__waves{
+    padding-top: 0;
+
+    }
+
+    /* ----------------------------------------------------------------- */
+    /* ----------------------------------------------RESPONSIVE DEL MAIN */
+    /* ----------------------------------------------------------------- */
+
+     /* -------------------------INDEX*/
+     .main__indexContainer{
+        margin: $margin-desktop-container;
+    }
+
+    /* ITEMS DE OFERTA*/
+    .item__innerBox{
+        .icons{
+            opacity: 0 !important;
+        }
+        .cart-btn{
+            opacity: 0 !important;
+            bottom: 10px !important;
+            left: 25%;
+            width: 50% !important;
+        }
+        &:hover{
+            box-shadow: 0 33px 61px -29px rgb(0 0 0 /50%);
+            .cart-btn{
+                opacity: 1 !important;
+            }
+    
+            .icons{
+                top: 3%;
+                opacity: 1 !important;
+                cursor: pointer;
+                a{
+                    @include size(30px, 30px);
+                    &:hover{
+                        .fa-heart{
+                            transform: scale(1.1, 1.1);  
+                        }
+                        .fa-eye{
+                            transform: scale(1.1, 1.1);  
+                        }
+                    }           
+                }
+            }
+        }
+
+    }
+
+    .item__info{
+        .item__name{
+            font-size: large !important;
+        }
+        .item__price{
+            font-size: medium !important;
+            &.onSale{
+                #precioOriginal{
+                    font-size:small;
+                }                    
+            }
+        }
+    }
+
+
+    .main__categories__category{
+        padding-bottom: 1%;
+    }
+
+    .index__tittle{
+        font-size: 300%;
+    }
+
+     /* -------------------------AYUDA*/
+    .main__helpContainer{
+        margin: $margin-desktop-container;
+    }
+
+    /* -------------------------SOBRE NOSOTROS*/
+    .main__aboutUsContainer{
+        margin: $margin-desktop-container;
+    }
+
+    /* -------------------------CONTACTO*/    
+    .main__contactContainer{
+        margin: $margin-desktop-container;
+    }
+
+    /* -------------------------FURNITURES*/  
+    .main__furnituresContainer{
+        margin: $margin-desktop-container;
+    }
+
+    /* -------------------------TEXTOS DEL MAIN*/ 
+    main{
+        &#index{
+            h2{/* Titulos H2 */
+                font-size: 400%;
+            }         
+        }
+        &#sobreNosotros ,&#contacto, &#ayuda, &#furnitures{
+            h1{/* Titulos H1 */
+                font: $h1-tablet;
+            }
+            h2{
+                font: $h2-tablet;
+            }
+        }     
+    } 
+
+    /* ----------------------------------------------------------------- */
+    /* --------------------------------------------RESPONSIVE DEL FOOTER */
+    /* ----------------------------------------------------------------- */
+    
+    /* --------------------------REORDENAR GRID DEL FOOTER*/
+    .footer__gridContainer{
+        padding: 2% 10%;
+        font-size: medium;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "socialNetworks     payments    footerInfo     newsLetter";
+        align-items: stretch;
+        grid-gap: 1%;
+    }
+
+    /* --------------------------ESTILOS DEL FOOTER*/
+    footer{
+        section{
+            div{
+                border: none;
+                border-right: solid 1px rgb(255, 255, 255);   
+            }
+        }
+    }
+
+    .footer__newsLetter{
+        border: none;
+    }
+
+    .footer__tittle{
+        font:$h4-footer-desktop;
+    }
+
+    .footer__socialNetworks{
+        h5{
+            font: $h5-footer-desktop;
+        }
+    }
+    
+    .footer__info{
+        h5{
+            font: $h5-footer-desktop;
+        }
+    }
+    
+    .footer__texto{
+        font: $p-footer-desktop;
+    }
+
+
+    /* ----------------------------------------------------------------- */
+    /* ---------------------------------------------- RESPONSIVE PAG 404 */
+    /* ----------------------------------------------------------------- */
+    body#error_page{
+        div.container{
+            section{
+                padding-top: 100px;
+                flex-direction: row-reverse;
+                div#info{
+                    padding:0;
+                    padding-right: 10%;
+                    padding-bottom: 15px;
+                    @include size(60vh, 40vw);
+                    justify-content: start;
+                    align-items: self-start;
+                    h1{
+                        font-size: 1000%;
+                    }
+                    h2{
+                        font-size: 300%;
+                    }
+                    p{
+                        font-size: 150%;
+                        padding:0;
+                        padding-top: 2%
+
+                    }
+                }
+                div#ilustracion{
+                    @include size(60vh, 60vw);
+                    img{
+                        @include size(60vh, 60vw);
+                    }
+                }
+            }
+
+            div#goHome{
+                button{
+                    width: 30%;
+                }
+            }
+        }     
+    }
+
+
+    /* ----------------------------------------------------------------- */
+    /* ------------------------------------------ RESPONSIVE DEL CARRITO */
+    /* ----------------------------------------------------------------- */
+
+    .tablaCarrito{
+
+        .cabezaLista{
+            p{
+                font-size: larger;
+                strong{
+                    font-size:x-large;
+                }
+            }        
+        }
+        .cuerpoLista{
+            .prodCarrito{
+                padding: 20px 0;
+                .cantidadProdCarrito{
+                    .btn{
+                        padding: 15%;
+                        font-size: x-large !important;
+                        &:active{
+                            background-color: $primary-color;
+                            color: white;
+                        }
+                    }
+                    span{
+                        font-size: x-large !important;
+                        margin: 6%;
+                    }
+                }
+                div{
+                    .imgCarrito{
+                        width: 10vw;
+                    } 
+                    i{
+                        cursor: pointer;
+                    }
+                    span#saleTag{
+                        font-size: medium;
+                        border-radius: 25px;
+                        padding: 5px;
+                    }
+                }  
+                p{
+                    font-size: large;
+                    span#precioOriginal{
+                        font-size:medium;
+                        text-decoration: line-through;
+                        color: $primary-color;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------PEQUEÑOS AJUSTES EN OTRAS RESOLUCIONES*/
+@media (min-width:1233px) {
+
+
+
+    .header__info{
+        height: 70%;
+    }
+
+    .index__tittle{
+        font-size: 350%;
+    }
+
+    /* -------------------------TEXTOS DEL MAIN*/ 
+    main{
+        &#index{
+            h2{/* Titulos H2 */
+                font-size: 400%;
+            }         
+        }
+        &#sobreNosotros ,&#contacto, &#ayuda, &#furnitures{
+            h1{/* Titulos H1 */
+                font: $h1-desktop;
+            }
+            h2{
+                font: $h2-desktop;
+            }
+        }     
+    } 
+
+}
+
+

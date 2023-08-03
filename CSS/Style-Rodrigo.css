@@ -1,0 +1,1459 @@
+@charset "UTF-8";
+/* ---------------------------------------------------- */
+/*----------------------------------- PALETA DE COLORES */
+/* ---------------------------------------------------- */
+/* BACKGROUNDS */
+/* BOTONES */
+/* SELECTORES A */
+/* BARRA DE BUSQUEDA */
+/* TEXT FIELDS */
+/* ---------------------------------------------------- */
+/*-------------------------------- TIPOGRAFIAS Y TEXTOS */
+/* ---------------------------------------------------- */
+/* ---------------------------------INDEX */
+/* MOBILE */
+/* ---------------------------------PAGES */
+/* MOBILE */
+/* TABLET */
+/* DESKTOP */
+/* --------------------------------FOOTER */
+/* MOBILE */
+/* DESKTOP */
+/* ---------------------------------------------------- */
+/*--------------------------------- MARGENES Y PADDINGS */
+/* ---------------------------------------------------- */
+/* ------------------------------CONTAINERS */
+/* MOBILE */
+/* DESKTOP */
+/* ---------------------------------------------------- */
+/*----------------------------------------- ANIMACIONES */
+/* ---------------------------------------------------- */
+@keyframes Aparecer-desde-izquierda {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* DISPLAY FELX */
+/* DAR TAMAÑOS */
+/* ---------------------------MENSAJES CON TOASTIFY */
+.mensajeToastify {
+  border-radius: 50px;
+}
+
+.agregado {
+  background: linear-gradient(to right, #8B9E70, #C2C2C2);
+}
+
+.quitado {
+  background: linear-gradient(to right, rgb(140, 50, 50), #C2C2C2);
+}
+
+/* ---------------------------MENSAJES CON SWEET ALERT */
+.btnConfirm {
+  background: #8B9E70 !important;
+  border-radius: 50px !important;
+}
+.btnConfirm:hover {
+  background: #6b7a56 !important;
+}
+.btnConfirm:active {
+  transform: scale(1.1);
+}
+
+.btnDeny {
+  background: #989797 !important;
+  border-radius: 50px !important;
+}
+.btnDeny:hover {
+  background: #565656 !important;
+  color: white !important;
+}
+.btnDeny:active {
+  transform: scale(1.1);
+}
+
+.iconQuestion {
+  color: #8B9E70 !important;
+  border-color: #8B9E70 !important;
+}
+
+.titleQuestion {
+  color: #8B9E70 !important;
+  font-family: "Dosis", sans-serif !important;
+}
+
+.titleSuccess {
+  color: #8B9E70 !important;
+  font-family: "Dosis", sans-serif !important;
+}
+
+.titleError {
+  color: #f27474 !important;
+  font-family: "Dosis", sans-serif !important;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------ CSS PARA EL HEADER --------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.header__gridContainer {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 100%;
+  grid-template-areas: "headerInfo" "headerImgs" "headerButtons";
+}
+
+/* ---------------------------------------------------------------- */
+/* -------------------------------------------PARTE FIJA DEL HEADER */
+/* ---------------------------------------------------------------- */
+.header__fixed {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: 100vw;
+  position: fixed;
+  z-index: 5;
+  background-color: #8B9E70;
+  padding: 10px 5% 5px 5%;
+}
+
+.header__logo, body#error_page div#logo img {
+  width: auto;
+  min-width: 150px;
+  max-width: 50%;
+}
+
+.header__fiexed__tools {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+
+/* ----------------------------BARRA DE NAVEGACION */
+.header__menu {
+  width: 80%;
+  right: 1%;
+  padding: 1%;
+  display: none;
+}
+.header__menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Heebo", sans-serif;
+  font-size: small;
+  margin: 2px;
+  width: 100%;
+  padding: 0;
+}
+
+.header__menu__item {
+  padding: 0 2%;
+}
+.header__menu__item a {
+  color: white;
+  text-decoration: none;
+}
+.header__menu__item a:hover {
+  color: #3a422f;
+  text-decoration: underline;
+}
+.header__menu__item #selected {
+  color: #3a422f;
+  height: auto;
+  width: 100%;
+  border-radius: 10PX;
+}
+
+/* -------------------------BARRA DE NAVEGACION DROPDOWN */
+.header__dropdownMenu {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.header__dropdownMenu:hover {
+  background: #3a422f;
+}
+.header__dropdownMenu:focus {
+  background: transparent;
+}
+
+.header__dropdownMenu__nav {
+  background-color: #768561;
+  width: 50%;
+  text-align: center;
+  border: solid 1px #424b37;
+}
+.header__dropdownMenu__nav a {
+  text-decoration: none;
+}
+
+/* ----------------BOTONES DEL DROPDOWN */
+.header__dropdownMenu__nav__linkBtn {
+  padding: 1%;
+  width: 70%;
+  border-radius: 15px;
+  margin: 1% 15%;
+  color: #fff;
+}
+.header__dropdownMenu__nav__linkBtn:hover {
+  background-color: #3a422f;
+  color: #fff !important;
+}
+.header__dropdownMenu__nav__linkBtn#selected {
+  color: #3a422f;
+}
+
+.header__dropdownMenu__nav__loginBtn {
+  padding: 1%;
+  width: 80%;
+  border-radius: 15px;
+  margin: 5% 10%;
+  border: solid 1px #424b37;
+  background-color: #424b37;
+  color: white;
+}
+.header__dropdownMenu__nav__loginBtn:hover {
+  background-color: #3a422f;
+  color: white;
+}
+
+/* -------------------BARRA DE BUSQUEDA DEL HEADER */
+.header__searchBar {
+  width: 40%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-family: "Heebo", sans-serif;
+  font-size: small;
+  right: 0;
+  background-color: rgba(209, 205, 205, 0.685);
+  border: solid 1px white;
+  border-radius: 20px;
+  transition: all 0.2s ease-in;
+}
+.header__searchBar:hover {
+  background-color: rgba(167, 161, 161, 0.685);
+}
+.header__searchBar:focus {
+  width: 60%;
+}
+
+.header__searchButton {
+  font-family: "Heebo", sans-serif;
+  font-weight: 600;
+  font-size: small;
+  padding: 5px 10px;
+  color: white;
+  border: solid 1px white;
+  border-radius: 20px;
+  background-color: rgba(209, 205, 205, 0.685);
+  cursor: pointer;
+  display: none;
+  order: 6;
+}
+.header__searchButton:hover {
+  background-color: rgba(167, 161, 161, 0.685);
+}
+
+/* ----------------------------------------LOGIN */
+.header__loginButton {
+  display: none;
+  padding: 5px 10px;
+  border-radius: 30px;
+  border: solid 1px #424b37;
+  background-color: #424b37;
+  color: white;
+  font-family: "Heebo", sans-serif;
+  font-size: small;
+  cursor: pointer;
+  display: none;
+}
+.header__loginButton:hover {
+  background-color: #3a422f;
+}
+
+/* -------------------------ICONOS MENU Y CARRITO*/
+.fa-bars {
+  color: #fff;
+  padding: 0 2%;
+}
+
+.fa-cart-shopping {
+  color: #fff;
+  margin: 0 2% 0 0;
+}
+.fa-cart-shopping:hover {
+  cursor: pointer;
+}
+
+/* ----------------------------------------------------------------- */
+/* -------------------------------------------INFORMACION DEL HEADER */
+/* ----------------------------------------------------------------- */
+.header__info {
+  background-color: #8B9E70;
+  grid-area: headerInfo;
+  height: 300px;
+  width: 100%;
+  margin-top: 50px;
+  padding: 5% 5%;
+}
+
+.header__info__tittle {
+  animation: Aparecer-desde-izquierda 0.5s ease-in;
+  color: white;
+  text-align: center;
+  font-family: "Heebo", sans-serif;
+  font-weight: 400;
+  font-size: 250%;
+  line-height: 100%;
+}
+
+.header__info__p {
+  animation: Aparecer-desde-izquierda 0.5s ease-in;
+  color: white;
+  text-align: center;
+  font-size: 120%;
+  padding-top: 1%;
+}
+
+/* ----------------------------------------------------------------- */
+/* -----------------------------------IMAGENES DE PORTADA DEL HEADER */
+/* ----------------------------------------------------------------- */
+.header__imgs {
+  grid-area: headerImgs;
+  padding: 0%;
+  position: absolute;
+  top: 285px;
+}
+.header__imgs .imgs {
+  width: 100%;
+  padding: 0 10%;
+}
+
+/* ----------------------------------------------------------------- */
+/* ----------------------------------------BOTONES BUY NOW Y EXPLORE */
+/* ----------------------------------------------------------------- */
+.header__buttons {
+  margin-top: 20%;
+  grid-area: headerButtons;
+  padding: 1% 5%;
+}
+
+.header__buyNowButton {
+  width: 100%;
+  padding: 15px 0;
+  margin: 1% 0;
+  border-radius: 30px;
+  border: solid 1px #424b37;
+  background-color: #424b37;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.header__buyNowButton:hover {
+  background-color: #3a422f;
+}
+
+.header__ExploreButton {
+  width: 100%;
+  padding: 15px 0;
+  margin: 1% 0;
+  border-radius: 30px;
+  border: solid 1px #424b37;
+  color: #424b37;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+}
+.header__ExploreButton:hover {
+  background-color: #768561;
+  color: #fff;
+}
+
+/* -------------------------BORDE DEL HEADER*/
+.header__waves {
+  width: 100vw;
+  padding-top: 50px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------ CSS PARA EL MAIN y CONTENIDO (INDEX) --------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.main__indexContainer {
+  margin: 2% 5vw 10% 5vw;
+}
+.main__indexContainer h2 {
+  padding: 5% 0 2% 0;
+}
+.main__indexContainer .section_container {
+  border-bottom: 2px solid #8B9E70;
+}
+
+/* ----------------------------------------------------------------- */
+/* --------------------------------------------TARJETAS DE ITEMS --- */
+/* ----------------------------------------------------------------- */
+.main__itemContainer .main__item {
+  margin-bottom: 10px;
+  padding-bottom: 5%;
+}
+.main__itemContainer .main__item:hover {
+  transform: scale(1.02, 1.02);
+}
+.main__itemContainer .main__item .item__innerBox {
+  position: relative;
+}
+.main__itemContainer .main__item .item__innerBox .icons {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  top: 3%;
+  right: 15px;
+  transition: all 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2 ease-in-out;
+  opacity: 1;
+}
+.main__itemContainer .main__item .item__innerBox .icons a {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #fff;
+  color: black;
+}
+.main__itemContainer .main__item .item__innerBox .icons a:active {
+  color: #8B9E70;
+}
+.main__itemContainer .main__item .item__innerBox .saleTag .badge {
+  background: #000;
+  font-size: 12px;
+  padding: 5px 14px;
+  top: 0;
+  position: absolute;
+}
+.main__itemContainer .main__item .item__innerBox .saleTag .badge:before {
+  border-width: 10px 0 0 10px;
+  border-color: transparent transparent transparent #000;
+  content: "";
+  position: absolute;
+  right: -8px;
+  width: 0;
+  bottom: 0;
+  border-style: solid;
+}
+.main__itemContainer .main__item .item__innerBox .saleTag .badge:after {
+  border-width: 10px 8px 0 10px;
+  border-color: #000 transparent transparent;
+  content: "";
+  position: absolute;
+  right: -8px;
+  width: 0;
+  top: 0;
+  border-style: solid;
+}
+.main__itemContainer .main__item .item__innerBox img {
+  box-shadow: 0 33px 61px -29px rgba(0, 0, 0, 0.26);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.main__itemContainer .main__item .item__innerBox .cart-btn {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  right: 0%;
+  width: 100%;
+  opacity: 1;
+  color: #000;
+  transition: all 0.2s ease-in-out, transform 0.2s ease-in-out, opacity 0.2 ease-in-out;
+}
+.main__itemContainer .main__item .item__innerBox .cart-btn:hover {
+  background: rgb(212, 210, 210) !important;
+}
+.main__itemContainer .main__item .item__innerBox .cart-btn .fa-cart-shopping#articles {
+  color: #000;
+}
+.main__itemContainer .main__item .item__info {
+  padding-bottom: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__itemContainer .main__item .item__info .item__name {
+  font-size: medium;
+  font-family: "Heebo", sans-serif;
+  font-weight: 500;
+  color: #464646;
+}
+.main__itemContainer .main__item .item__info .item__name p {
+  margin: 0;
+}
+.main__itemContainer .main__item .item__info .item__price {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-size: small;
+}
+.main__itemContainer .main__item .item__info .item__price.onSale #precioOriginal {
+  font-size: smaller;
+  text-decoration: line-through;
+  color: #8B9E70;
+}
+
+.cardSinCoindicencias {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  border: 3px solid rgb(236, 51, 51);
+  background-color: rgb(241, 178, 178);
+  border-radius: 30px;
+  padding: 3% 0;
+  margin-top: 2%;
+}
+
+/* ----------------------------------------------------------------- */
+/* --------------------------------------------SECCION DE CATEGORIAS */
+/* ----------------------------------------------------------------- */
+.main__categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
+  width: auto;
+}
+
+.main__categories__category {
+  padding-bottom: 1%;
+  width: 400px;
+  margin: 2%;
+  cursor: pointer;
+  color: #8B9E70;
+}
+.main__categories__category:hover {
+  background-color: #8B9E70;
+  color: #fff;
+}
+
+.main__categories__category__tittle {
+  text-align: center;
+  padding: 1%;
+  font: normal 500 150% "Heebo", sans-serif;
+}
+
+.main__categories__category__img {
+  width: 100%;
+}
+
+/* ----------------------------------------------------------------- */
+/* -----------------------------------------------------------TEXTOS */
+/* ----------------------------------------------------------------- */
+main#index h2 {
+  font: normal 400 250% "Dosis", sans-serif;
+  margin: 20px 0;
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+
+.main__parrafos {
+  text-align: justify;
+  font-family: "Dosis", sans-serif;
+  font-size: larger;
+  margin-bottom: 40px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------- CSS PARA EL MAIN y CONTENIDO (FORNITURES) --------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.main__furnituresContainer {
+  margin: 2% 5vw 10% 5vw;
+}
+
+/* -----------------TITULOS Y TEXTOS*/
+main#furnitures h1 { /* Titulos H1 */
+  font: normal 400 250% "Dosis", sans-serif;
+  margin: 20px 0;
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+main#furnitures h2 {
+  font: normal 200 150% "Dosis", sans-serif;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* --------------------------------------------- CSS PARA EL MAIN y CONTENIDO (SOBRE NOSOTROS) --------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.main__aboutUsContainer {
+  margin: 2% 5vw 10% 5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -----------------TITULOS Y TEXTOS*/
+main#sobreNosotros h1 { /* Titulos H1 */
+  font: normal 400 250% "Dosis", sans-serif;
+  margin: 20px 0;
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+main#sobreNosotros h2 {
+  font: normal 200 150% "Dosis", sans-serif;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------- CSS PARA EL MAIN y CONTENIDO (AYUDA)) --------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.main__helpContainer {
+  text-align: center;
+  margin: 2% 5vw 10% 5vw;
+}
+
+/* ---------------------SECCIONES DE OPCIONES DE AYUDA*/
+.main__helpContainer__section {
+  margin: 5% 0;
+}
+.main__helpContainer__section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: stretch;
+}
+.main__helpContainer__section #searchSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---------------------BOTONES DE AYUDA*/
+.main__helpContainer__section__button {
+  width: 100%;
+  padding: 1%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  background-color: #8B9E70;
+  border: solid 1px #8B9E70;
+  cursor: pointer;
+  color: white;
+  font-family: "Heebo", sans-serif;
+  font-weight: 600;
+  font-size: 120%;
+  border-radius: 20px;
+}
+.main__helpContainer__section__button:hover {
+  background-color: #768561;
+}
+
+.main__helpContainer__section__searchButton {
+  cursor: pointer;
+  font-family: "Heebo", sans-serif;
+  font-weight: 600;
+  font-size: 80%;
+  padding: 1%;
+  border: solid 1px black;
+  border-radius: 20px;
+  background-color: rgba(209, 205, 205, 0.685);
+}
+.main__helpContainer__section__searchButton:hover {
+  background-color: rgba(167, 161, 161, 0.685);
+}
+
+/* ---------------------BARRA DE BUSQUEDA DE AYUDA*/
+.main__helpContainer__section__searchBar {
+  width: 93%;
+  text-align: center;
+  padding: 1%;
+  background-color: rgba(209, 205, 205, 0.685);
+  border: solid 1px black;
+  border-radius: 20px;
+}
+.main__helpContainer__section__searchBar:hover {
+  background-color: rgba(167, 161, 161, 0.685);
+}
+
+/* -----------------TITULOS Y TEXTOS*/
+main#ayuda h1 { /* Titulos H1 */
+  font: normal 400 250% "Dosis", sans-serif;
+  margin: 20px 0;
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+main#ayuda h2 {
+  font: normal 200 150% "Dosis", sans-serif;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------- CSS PARA EL MAIN y CONTENIDO (CONTACTO)) --------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------CONTENEDORES DEL FORMULARIO DE AYUDA*/
+.main__contactContainer {
+  margin: 2% 5vw 10% 5vw;
+}
+
+.main__contactContainer__fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: stretch;
+  align-items: stretch;
+  text-align: center;
+}
+
+/* -----------------ELEMENTOS DEL FORMULARIO DE AYUDA*/
+.main__contact__label {
+  font-family: "Heebo", sans-serif;
+  font-size: 100%;
+  text-align: center;
+}
+
+.main__contact__TextField {
+  font-family: "Heebo", sans-serif;
+  font-size: 100%;
+  border-radius: 20px;
+  color: #8B9E70;
+  border: solid 1px black;
+  padding: 1%;
+  width: 100%;
+  background-color: rgba(206, 231, 171, 0.5333333333);
+  margin-bottom: 5%;
+}
+.main__contact__TextField:focus {
+  color: #000000;
+  background-color: rgba(155, 175, 128, 0.7333333333);
+}
+.main__contact__TextField:hover {
+  color: #000000;
+  background-color: rgba(155, 175, 128, 0.7333333333);
+}
+
+.main__contact__SubmitButton {
+  font-family: "Heebo", sans-serif;
+  font-weight: 600;
+  font-size: 100%;
+  padding: 0.5%;
+  border: solid 1px black;
+  border-radius: 20px;
+  background-color: rgba(209, 205, 205, 0.685);
+  width: 40%;
+  cursor: pointer;
+}
+.main__contact__SubmitButton:hover {
+  background-color: rgba(167, 161, 161, 0.685);
+}
+
+/* -----------------TITULOS Y TEXTOS*/
+main#contacto h1 { /* Titulos H1 */
+  font: normal 400 250% "Dosis", sans-serif;
+  margin: 20px 0;
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+main#contacto h2 {
+  font: normal 200 150% "Dosis", sans-serif;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------ CSS PARA EL FOOTER --------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+footer section div {
+  border: solid 1px rgb(255, 255, 255);
+  padding: 2%;
+}
+
+.footer__gridContainer {
+  background-color: #C2C2C2;
+  padding: 2% 5%;
+  text-align: center;
+  font-size: small;
+  font-family: "Heebo", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "payments       payments" "footerInfo     footerInfo" "socialNetworks newsLetter";
+  align-items: stretch;
+  grid-gap: 1%;
+}
+
+.footer__socialNetworks {
+  grid-area: socialNetworks;
+  padding: 1%;
+  border-right: solid 1px rgb(255, 255, 255);
+}
+.footer__socialNetworks h5 {
+  font: normal 400 medium "Heebo", sans-serif;
+  margin-bottom: 5px;
+}
+
+.footer__payments {
+  grid-area: payments;
+  width: 100%;
+}
+.footer__payments img {
+  padding: 1%;
+}
+
+.footer__info {
+  grid-area: footerInfo;
+  word-wrap: break-word;
+}
+.footer__info h5 {
+  font: normal 400 medium "Heebo", sans-serif;
+}
+
+.footer__newsLetter {
+  grid-area: newsLetter;
+  word-wrap: break-word;
+  padding-bottom: 5%;
+}
+
+.footer__tittle {
+  font: normal 600 medium "Heebo", sans-serif;
+}
+
+.footer__texto {
+  font: normal 200 small "Heebo", sans-serif;
+}
+
+/* -------------------------BORDE DEL HEADER*/
+.footer__waves {
+  width: 100vw;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------ CSS PARA EL CARRITO --------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.main__carritoContainer {
+  margin: 2% 5vw 10% 5vw;
+  padding-bottom: 10%;
+}
+
+main#carrito h1 { /* Titulos H1 */
+  font: normal 400 250% "Dosis", sans-serif;
+  padding-bottom: 5%;
+  margin: 20px 0;
+  color: black;
+  text-align: center;
+  width: 100%;
+}
+
+/* lista de productos en carrito */
+.tablaCarrito {
+  font-family: "Dosis", sans-serif;
+  width: 100%;
+  font-size: smaller;
+}
+.tablaCarrito .cabezaLista {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 2px solid #8B9E70;
+}
+.tablaCarrito .cabezaLista p {
+  display: flex;
+  justify-content: center;
+  width: 14%;
+}
+.tablaCarrito .cabezaLista p strong {
+  font-size: smaller;
+}
+.tablaCarrito .cuerpoLista .prodCarrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #768561;
+}
+.tablaCarrito .cuerpoLista .prodCarrito .precioProdCarrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tablaCarrito .cuerpoLista .prodCarrito .cantidadProdCarrito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tablaCarrito .cuerpoLista .prodCarrito .cantidadProdCarrito .btn {
+  display: flex;
+  align-items: center;
+  padding: 0%;
+  padding: 20%;
+  border-radius: 50px;
+  width: 2%;
+  height: 20px;
+  border-color: #8B9E70;
+  font-size: smaller;
+}
+.tablaCarrito .cuerpoLista .prodCarrito .cantidadProdCarrito .btn:active {
+  background-color: #8B9E70;
+  color: white;
+}
+.tablaCarrito .cuerpoLista .prodCarrito .cantidadProdCarrito span {
+  font-size: smaller;
+  margin: 6%;
+}
+.tablaCarrito .cuerpoLista .prodCarrito div {
+  display: flex;
+  justify-content: center;
+  width: 14%;
+  margin: 0;
+  position: relative;
+}
+.tablaCarrito .cuerpoLista .prodCarrito div .imgCarrito {
+  width: 10vw;
+}
+.tablaCarrito .cuerpoLista .prodCarrito div i {
+  cursor: pointer;
+}
+.tablaCarrito .cuerpoLista .prodCarrito div span#saleTag {
+  position: absolute;
+  font-size: small;
+  bottom: 0;
+  right: 0%;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  padding: 2px;
+}
+.tablaCarrito .cuerpoLista .prodCarrito p {
+  display: flex;
+  justify-content: center;
+  width: 14%;
+  margin: 0;
+  font-size: small;
+}
+.tablaCarrito .cuerpoLista .prodCarrito p span#precioOriginal {
+  font-size: x-small;
+  text-decoration: line-through;
+  color: #8B9E70;
+}
+.tablaCarrito .cuerpoLista .carritoVacio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5%;
+  font-size: larger;
+  font-weight: 600;
+}
+.tablaCarrito .cuerpoLista .cardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tablaCarrito .cuerpoLista .cardContainer .cardCarritoVacio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+  border: 3px solid rgb(236, 51, 51);
+  background-color: rgb(241, 178, 178);
+  border-radius: 30px;
+  padding: 3% 0;
+  margin-top: 2%;
+  /* offset-x | offset-y | blur-radius | color */
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.471);
+}
+.tablaCarrito .cuerpoLista .cardContainer .cardCarritoVacio p {
+  font-size: medium;
+  font-family: "Dosis", sans-serif;
+  text-align: center;
+  padding: 0 5px;
+  font-weight: 800;
+}
+.tablaCarrito .cuerpoLista .cardContainer .cardCarritoVacio img {
+  width: 100px;
+}
+.tablaCarrito .pieLista {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  margin-right: 20px;
+  font-size: medium;
+}
+.tablaCarrito .pieLista .btnVaciarCarrito {
+  width: 20%;
+  padding: 5px 0;
+  margin: 1% 0;
+  border-radius: 30px;
+  background-color: white;
+  color: #8B9E70;
+  font-weight: 600;
+  cursor: pointer;
+}
+.tablaCarrito .pieLista .btnVaciarCarrito:hover {
+  background-color: #8B9E70;
+  color: white;
+}
+
+/* Botones */
+.botonesCarrito {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.botonesCarrito a {
+  width: 30%;
+  border-radius: 30px;
+}
+.botonesCarrito a .btn {
+  width: 100%;
+  padding: 15px 0;
+  margin: 1% 0;
+  border-radius: 30px;
+  background-color: #8B9E70;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.botonesCarrito a .btn:hover {
+  background-color: #3a422f;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------ CSS PARA PAG 404 --------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+body#error_page {
+  height: 100vh;
+}
+body#error_page div#logo {
+  height: 10vh;
+}
+body#error_page div#logo img {
+  height: 10vh;
+  padding: 1%;
+}
+body#error_page div.container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body#error_page div.container section {
+  padding-top: 10px;
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+body#error_page div.container section div#info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+  padding-bottom: 15px;
+  color: rgb(37, 37, 37);
+}
+body#error_page div.container section div#info h1 {
+  font-size: 600%;
+}
+body#error_page div.container section div#info p {
+  padding: 2%;
+  color: rgb(85, 85, 85);
+  text-align: justify;
+}
+body#error_page div.container section div#ilustracion {
+  height: 30vh;
+  width: 100vw;
+  /* -------------------------------------alto de la ilustracion */
+  background-color: #8B9E70;
+  margin: 0;
+}
+body#error_page div.container section div#ilustracion img {
+  bottom: 0;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  max-width: 100vw;
+  height: 30vh;
+  width: 100vw;
+  border-bottom-left-radius: 60px;
+  padding-bottom: 15px;
+}
+body#error_page div.container div#goHome { /* Seccion del boton HOME */
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #8B9E70;
+  border-top-right-radius: 60px;
+}
+body#error_page div.container div#goHome button {
+  width: 80%;
+  border-radius: 30px;
+  padding: 15px 0;
+  border-radius: 30px;
+  border: solid 1px #ffffff;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+body#error_page div.container div#goHome button a {
+  text-decoration: none;
+  color: #ffffff;
+}
+body#error_page div.container div#goHome button:hover {
+  background-color: #768561;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- DISEÑO RESPONSIVE --------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+@media (min-width: 768px) or (orientation: landscape) {
+  .header__imgs {
+    top: 245px;
+  }
+}
+@media (min-width: 980px) {
+  /* ----------------------------------------------------------------- */
+  /* --------------------------------------------RESPONSIVE DEL HEADER */
+  /* ----------------------------------------------------------------- */
+  /* ----------------------REORDENO EL GRID DEL HEADER*/
+  .header__gridContainer {
+    background-color: #8B9E70;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1.2fr 2fr;
+    grid-template-areas: "headerInfo     headerImgs" "headerButtons  headerImgs";
+    margin-bottom: 150px;
+    row-gap: 2%;
+  }
+  /* ----------------------OCULTAR BOTON DE MENU*/
+  i#menu {
+    display: none;
+  }
+  /* ----------------------MOSTRAR NAV*/
+  .header__menu {
+    display: block;
+  }
+  /* ----------------------MOSTRAR BOTON DE BUSCAR*/
+  .header__searchButton {
+    display: block;
+  }
+  /* --------------AJUSTAR BARRA DE BUSQUEDA*/
+  .header__searchBar {
+    width: 85%;
+    order: 5;
+    margin-right: 2%;
+    padding: 5px 0;
+  }
+  .header__searchBar:focus {
+    width: 85%;
+  }
+  /* ----------------------MOSTRAR BOTON DE LOGIN*/
+  .header__loginButton {
+    display: block;
+  }
+  /* --------------AJUSTAR PARTE FIJA DEL HEADER*/
+  .header__fixed {
+    padding: 5px 10% 5px 10%;
+  }
+  /* ------------------AJUSTAR TEXTO DEL HEADER*/
+  .header__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: end;
+    margin-top: 108px;
+    padding: 2% 0;
+    padding-left: 10vw;
+    height: 70%;
+  }
+  .header__info__tittle {
+    text-align: left;
+  }
+  .header__info__p {
+    text-align: left;
+    font-size: 120%;
+  }
+  /* --------------AJUSTAR IMAGENES DEL HEADER*/
+  .header__imgs {
+    right: 10vw;
+    width: 50%;
+  }
+  .header__imgs .imgs {
+    padding: 0;
+  }
+  /* ------------AJUSTAR BOTONES BUYNOW Y EXPLORE*/
+  .header__buttons {
+    margin-top: 3%;
+    padding: 1% 0 10% 0;
+    padding-left: 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .header__ExploreButton {
+    width: 70%;
+    margin: 1% 0;
+    margin-left: 5%;
+    border: solid 1px #fff;
+    color: #fff;
+  }
+  /* -------------------------BORDE DEL HEADER*/
+  .header__waves {
+    padding-top: 0;
+  }
+  /* ----------------------------------------------------------------- */
+  /* ----------------------------------------------RESPONSIVE DEL MAIN */
+  /* ----------------------------------------------------------------- */
+  /* -------------------------INDEX*/
+  .main__indexContainer {
+    margin: 2% 10vw 10% 10vw;
+  }
+  /* ITEMS DE OFERTA*/
+  .item__innerBox .icons {
+    opacity: 0 !important;
+  }
+  .item__innerBox .cart-btn {
+    opacity: 0 !important;
+    bottom: 10px !important;
+    left: 25%;
+    width: 50% !important;
+  }
+  .item__innerBox:hover {
+    box-shadow: 0 33px 61px -29px rgba(0, 0, 0, 0.5);
+  }
+  .item__innerBox:hover .cart-btn {
+    opacity: 1 !important;
+  }
+  .item__innerBox:hover .icons {
+    top: 3%;
+    opacity: 1 !important;
+    cursor: pointer;
+  }
+  .item__innerBox:hover .icons a {
+    height: 30px;
+    width: 30px;
+  }
+  .item__innerBox:hover .icons a:hover .fa-heart {
+    transform: scale(1.1, 1.1);
+  }
+  .item__innerBox:hover .icons a:hover .fa-eye {
+    transform: scale(1.1, 1.1);
+  }
+  .item__info .item__name {
+    font-size: large !important;
+  }
+  .item__info .item__price {
+    font-size: medium !important;
+  }
+  .item__info .item__price.onSale #precioOriginal {
+    font-size: small;
+  }
+  .main__categories__category {
+    padding-bottom: 1%;
+  }
+  .index__tittle {
+    font-size: 300%;
+  }
+  /* -------------------------AYUDA*/
+  .main__helpContainer {
+    margin: 2% 10vw 10% 10vw;
+  }
+  /* -------------------------SOBRE NOSOTROS*/
+  .main__aboutUsContainer {
+    margin: 2% 10vw 10% 10vw;
+  }
+  /* -------------------------CONTACTO*/
+  .main__contactContainer {
+    margin: 2% 10vw 10% 10vw;
+  }
+  /* -------------------------FURNITURES*/
+  .main__furnituresContainer {
+    margin: 2% 10vw 10% 10vw;
+  }
+  /* -------------------------TEXTOS DEL MAIN*/
+  main#index h2 { /* Titulos H2 */
+    font-size: 400%;
+  }
+  main#sobreNosotros h1, main#contacto h1, main#ayuda h1, main#furnitures h1 { /* Titulos H1 */
+    font: normal 400 300% "Dosis", sans-serif;
+  }
+  main#sobreNosotros h2, main#contacto h2, main#ayuda h2, main#furnitures h2 {
+    font: normal 200 200% "Dosis", sans-serif;
+  }
+  /* ----------------------------------------------------------------- */
+  /* --------------------------------------------RESPONSIVE DEL FOOTER */
+  /* ----------------------------------------------------------------- */
+  /* --------------------------REORDENAR GRID DEL FOOTER*/
+  .footer__gridContainer {
+    padding: 2% 10%;
+    font-size: medium;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "socialNetworks     payments    footerInfo     newsLetter";
+    align-items: stretch;
+    grid-gap: 1%;
+  }
+  /* --------------------------ESTILOS DEL FOOTER*/
+  footer section div {
+    border: none;
+    border-right: solid 1px rgb(255, 255, 255);
+  }
+  .footer__newsLetter {
+    border: none;
+  }
+  .footer__tittle {
+    font: normal 600 x-large "Heebo", sans-serif;
+  }
+  .footer__socialNetworks h5 {
+    font: normal 400 large "Heebo", sans-serif;
+  }
+  .footer__info h5 {
+    font: normal 400 large "Heebo", sans-serif;
+  }
+  .footer__texto {
+    font: normal 200 small "Heebo", sans-serif;
+  }
+  /* ----------------------------------------------------------------- */
+  /* ---------------------------------------------- RESPONSIVE PAG 404 */
+  /* ----------------------------------------------------------------- */
+  body#error_page div.container section {
+    padding-top: 100px;
+    flex-direction: row-reverse;
+  }
+  body#error_page div.container section div#info {
+    padding: 0;
+    padding-right: 10%;
+    padding-bottom: 15px;
+    height: 60vh;
+    width: 40vw;
+    justify-content: start;
+    align-items: self-start;
+  }
+  body#error_page div.container section div#info h1 {
+    font-size: 1000%;
+  }
+  body#error_page div.container section div#info h2 {
+    font-size: 300%;
+  }
+  body#error_page div.container section div#info p {
+    font-size: 150%;
+    padding: 0;
+    padding-top: 2%;
+  }
+  body#error_page div.container section div#ilustracion {
+    height: 60vh;
+    width: 60vw;
+  }
+  body#error_page div.container section div#ilustracion img {
+    height: 60vh;
+    width: 60vw;
+  }
+  body#error_page div.container div#goHome button {
+    width: 30%;
+  }
+  /* ----------------------------------------------------------------- */
+  /* ------------------------------------------ RESPONSIVE DEL CARRITO */
+  /* ----------------------------------------------------------------- */
+  .tablaCarrito .cabezaLista p {
+    font-size: larger;
+  }
+  .tablaCarrito .cabezaLista p strong {
+    font-size: x-large;
+  }
+  .tablaCarrito .cuerpoLista .prodCarrito {
+    padding: 20px 0;
+  }
+  .tablaCarrito .cuerpoLista .prodCarrito .cantidadProdCarrito .btn {
+    padding: 15%;
+    font-size: x-large !important;
+  }
+  .tablaCarrito .cuerpoLista .prodCarrito .cantidadProdCarrito .btn:active {
+    background-color: #8B9E70;
+    color: white;
+  }
+  .tablaCarrito .cuerpoLista .prodCarrito .cantidadProdCarrito span {
+    font-size: x-large !important;
+    margin: 6%;
+  }
+  .tablaCarrito .cuerpoLista .prodCarrito div .imgCarrito {
+    width: 10vw;
+  }
+  .tablaCarrito .cuerpoLista .prodCarrito div i {
+    cursor: pointer;
+  }
+  .tablaCarrito .cuerpoLista .prodCarrito div span#saleTag {
+    font-size: medium;
+    border-radius: 25px;
+    padding: 5px;
+  }
+  .tablaCarrito .cuerpoLista .prodCarrito p {
+    font-size: large;
+  }
+  .tablaCarrito .cuerpoLista .prodCarrito p span#precioOriginal {
+    font-size: medium;
+    text-decoration: line-through;
+    color: #8B9E70;
+  }
+}
+/* -----------------------PEQUEÑOS AJUSTES EN OTRAS RESOLUCIONES*/
+@media (min-width: 1233px) {
+  .header__info {
+    height: 70%;
+  }
+  .index__tittle {
+    font-size: 350%;
+  }
+  /* -------------------------TEXTOS DEL MAIN*/
+  main#index h2 { /* Titulos H2 */
+    font-size: 400%;
+  }
+  main#sobreNosotros h1, main#contacto h1, main#ayuda h1, main#furnitures h1 { /* Titulos H1 */
+    font: normal 400 400% "Dosis", sans-serif;
+  }
+  main#sobreNosotros h2, main#contacto h2, main#ayuda h2, main#furnitures h2 {
+    font: normal 200 200% "Dosis", sans-serif;
+  }
+}
+
+/*# sourceMappingURL=Style.css.map */

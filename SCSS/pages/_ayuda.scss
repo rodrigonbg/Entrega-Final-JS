@@ -1,0 +1,78 @@
+.main__helpContainer{
+    text-align: center;
+    margin: $margin-mobile-container;
+}
+
+/* ---------------------SECCIONES DE OPCIONES DE AYUDA*/
+.main__helpContainer__section{
+    margin: 5% 0;
+    form{
+        @include flexCenter(column);
+        justify-content: stretch;
+        
+    }
+    #searchSection{
+        @include flexCenter(row);
+        justify-content: space-between;
+    }
+}
+
+/* ---------------------BOTONES DE AYUDA*/
+.main__helpContainer__section__button{
+    width: 100%;
+    padding: 1%;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    background-color: $btn-lightGreen;
+    border: solid 1px #8B9E70;
+    cursor: pointer;
+    color: white;
+    font-family: $font-family1;
+    font-weight: 600;
+    font-size: 120%;
+    border-radius: 20px;
+    &:hover{
+        background-color: $btn-lightGreen-hoven;
+    }
+}
+
+.main__helpContainer__section__searchButton{
+    cursor: pointer;
+    font-family: $font-family1;
+    font-weight: 600;
+    font-size: 80%;
+    padding: 1%;
+    border: solid 1px black;
+    border-radius: 20px;
+    background-color: $SearchBtn-color;
+    &:hover{
+        background-color: $SearchBtn-color-hoven;
+    }
+}
+
+/* ---------------------BARRA DE BUSQUEDA DE AYUDA*/
+.main__helpContainer__section__searchBar{
+    width: 93%;
+    text-align: center;
+    padding: 1%;
+    background-color: $SearchBar-color;
+    border: solid 1px black;
+    border-radius: 20px;
+    &:hover{
+        background-color: $SearchBar-color-hoven;
+    }
+}
+
+/* -----------------TITULOS Y TEXTOS*/
+main#ayuda{
+    h1{/* Titulos H1 */
+        font: $h1-mobile;
+        margin: 20px 0 ;
+        color: black;
+        text-align: center;
+        width: 100%;
+    }
+    h2{
+        font: $h2-mobile;
+    }
+}

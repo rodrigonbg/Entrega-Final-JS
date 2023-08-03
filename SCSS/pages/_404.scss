@@ -1,0 +1,77 @@
+body#error_page{
+    height: 100vh;
+    div#logo{
+        height: 10vh;
+        img{
+            @extend .header__logo;
+            height:10vh;
+            padding: 1%;
+        }
+    }
+
+    div.container{
+        height: 90vh;
+        @include flexCenter(column);
+        section{
+            padding-top: 10px;
+            @include size(70vh, 100%);
+            @include flexCenter(column);
+            justify-content: space-between;
+            div#info{
+                @include flexCenter(column);
+                padding: 0 5%;
+                padding-bottom: 15px;
+                color: rgb(37, 37, 37);
+                h1{
+                    font-size: 600%;
+                }
+                p{
+                    padding: 2%;
+                    color: rgb(85, 85, 85);
+                    text-align: justify;
+                }
+            }
+            div#ilustracion{
+                @include size(30vh, 100vw);/* -------------------------------------alto de la ilustracion */
+                background-color: $primary-color;
+                margin: 0;
+                img{
+                    bottom: 0;
+                    margin: 0;
+                    background-color: rgb(255, 255, 255);
+                    max-width: 100vw;
+                    @include size(30vh, 100vw);
+                    border-bottom-left-radius: 60px;
+                    padding-bottom: 15px
+                }
+
+            }
+        }
+
+
+        div#goHome{/* Seccion del boton HOME */
+            @include size(20vh, 100%);
+            @include flexCenter(row);
+            background-color: $primary-color;
+            border-top-right-radius: 60px;
+            button{
+                a{
+                    text-decoration: none;
+                    color: #ffffff;
+                }
+                width: 80%;
+                border-radius: 30px;
+                padding: 15px 0;
+                border-radius: 30px;
+                border:solid 1px #ffffff;
+                background-color: transparent;
+                color: white;
+                font-weight:600;
+                cursor: pointer;
+                &:hover{
+                    background-color: $btn-lightGreen-hoven;
+                }
+            }
+        }
+    }
+}

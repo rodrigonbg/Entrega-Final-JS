@@ -1,0 +1,68 @@
+/* ------------------CONTENEDORES DEL FORMULARIO DE AYUDA*/
+.main__contactContainer{
+    margin: $margin-mobile-container;
+}
+
+.main__contactContainer__fields{
+    @include flexCenter(column);
+    justify-content: stretch;
+    align-items: stretch;
+    text-align: center;
+
+}
+
+/* -----------------ELEMENTOS DEL FORMULARIO DE AYUDA*/
+.main__contact__label{
+    font-family: $font-family1;
+    font-size: 100%;
+    text-align: center;
+}
+
+.main__contact__TextField{
+    font-family: $font-family1;
+    font-size: 100%;
+    border-radius: 20px;
+    color: $textField-text-color;
+    border: solid 1px black;
+    padding: 1%;
+    width: 100%;
+    background-color: $textField-color;    
+    margin-bottom: 5%;
+    &:focus{
+        color: $textField-text-color-focus;
+        background-color: $textField-color-focus; 
+    }
+    &:hover{
+        color: $textField-text-color-hoven;
+        background-color: $textField-color-hoven;
+    }
+}
+
+.main__contact__SubmitButton{
+    font-family: $font-family1;
+    font-weight: 600;
+    font-size: 100%;
+    padding: 0.5%;
+    border: solid 1px black;
+    border-radius: 20px;
+    background-color: $submitBtn-color;
+    width: 40%;
+    cursor: pointer;
+    &:hover{
+        background-color: $submitBtn-color-hoven; 
+    }
+}
+
+/* -----------------TITULOS Y TEXTOS*/
+main#contacto{
+    h1{/* Titulos H1 */
+        font: $h1-mobile;
+        margin: 20px 0 ;
+        color: black;
+        text-align: center;
+        width: 100%;
+    }
+    h2{
+        font: $h2-mobile;
+    }
+}

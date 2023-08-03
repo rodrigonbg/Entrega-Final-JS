@@ -1,0 +1,15 @@
+
+/* DISPLAY FELX */
+@mixin flexCenter($direction){
+    display:flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+/* DAR TAMAÑOS */
+@mixin size($height, $width){
+    height: $height;
+    width: $width;
+} 
+

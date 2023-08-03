@@ -1,0 +1,19 @@
+.main__aboutUsContainer{
+    margin: $margin-mobile-container;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -----------------TITULOS Y TEXTOS*/
+main#sobreNosotros{
+    h1{/* Titulos H1 */
+        font: $h1-mobile;
+        margin: 20px 0 ;
+        color: black;
+        text-align: center;
+        width: 100%;
+    }
+    h2{
+        font: $h2-mobile;
+    }
+}

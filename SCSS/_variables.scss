@@ -1,0 +1,100 @@
+/* ---------------------------------------------------- */
+/*----------------------------------- PALETA DE COLORES */
+/* ---------------------------------------------------- */
+/* BACKGROUNDS */
+$primary-color: #8B9E70;
+$dropdownMenu-backround:#768561;
+$backround-footer: #C2C2C2;
+
+/* BOTONES */
+$btn-darkGreen:#424b37;
+$btn-darkGreen-hoven:#3a422f;
+$btn-lightGreen: #8B9E70;
+$btn-lightGreen-hoven:#768561;
+
+/* SELECTORES A */
+$a-darkGreen-selected:#3a422f;
+$a-darkGreen-hoven:#3a422f;
+
+/* BARRA DE BUSQUEDA */
+$SearchBar-color: rgba(209, 205, 205, 0.685);
+$SearchBar-color-hoven:rgba(167, 161, 161, 0.685);
+$SearchBtn-color: rgba(209, 205, 205, 0.685);
+$SearchBtn-color-hoven:rgba(167, 161, 161, 0.685);
+
+/* TEXT FIELDS */
+$textField-color:#cee7ab88;
+$textField-text-color:#8B9E70;
+
+$textField-color-hoven:#9baf80bb;
+$textField-text-color-hoven:#000000;
+
+$textField-color-focus:#9baf80bb;
+$textField-text-color-focus:#000000;
+
+$submitBtn-color: rgba(209, 205, 205, 0.685);
+$submitBtn-color-hoven:rgba(167, 161, 161, 0.685);
+
+/* ---------------------------------------------------- */
+/*-------------------------------- TIPOGRAFIAS Y TEXTOS */
+/* ---------------------------------------------------- */
+$font-family1:'Heebo', sans-serif;
+$font-family2: 'Dosis', sans-serif;
+
+/* ---------------------------------INDEX */
+/* MOBILE */
+$h2-mobile-index:normal 400 250% $font-family2;
+$h3-mobile-index:normal 500 150% $font-family1;
+$p-mobile-index:aa;
+
+/* ---------------------------------PAGES */
+/* MOBILE */
+$h1-mobile:normal 400 250% $font-family2;
+$h2-mobile:normal 200 150% $font-family2;
+$p-mobile:aa;
+
+/* TABLET */
+$h1-tablet:normal 400 300% $font-family2;
+$h2-tablet:normal 200 200% $font-family2;
+$p-tablet:aa;
+
+/* DESKTOP */
+$h1-desktop:normal 400 400% $font-family2;
+$h2-desktop:normal 200 200% $font-family2;
+$p-desktop:aa;
+
+/* --------------------------------FOOTER */
+/* MOBILE */
+$h4-footer-mobile:normal 600 medium $font-family1;
+$h5-footer-mobile:normal 400 medium $font-family1;
+$p-footer-mobile:normal 200 small $font-family1;
+
+/* DESKTOP */
+$h4-footer-desktop:normal 600 x-large $font-family1;
+$h5-footer-desktop:normal 400 large $font-family1;
+$p-footer-desktop:normal 200 small $font-family1;
+
+/* ---------------------------------------------------- */
+/*--------------------------------- MARGENES Y PADDINGS */
+/* ---------------------------------------------------- */
+
+/* ------------------------------CONTAINERS */
+/* MOBILE */
+$margin-mobile-container:2% 5vw 10% 5vw;
+
+/* DESKTOP */
+$margin-desktop-container:2% 10vw 10% 10vw;
+
+/* ---------------------------------------------------- */
+/*----------------------------------------- ANIMACIONES */
+/* ---------------------------------------------------- */
+@keyframes Aparecer-desde-izquierda{
+    from{
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

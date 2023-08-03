@@ -1,0 +1,12 @@
+{
+  "name": "fantasy-store-repository",
+  "version": "1.0.0",
+  "description": "E-commerce de muebles y articulos de decoración como proyecto de coderhous.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile" : "sass --watch scss:css"
+  },
+  "author": "",
+  "license": "ISC"
+}

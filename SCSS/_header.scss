@@ -1,0 +1,285 @@
+.header__gridContainer{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "headerInfo"
+        "headerImgs"
+        "headerButtons";
+}
+
+/* ---------------------------------------------------------------- */
+/* -------------------------------------------PARTE FIJA DEL HEADER */ 
+/* ---------------------------------------------------------------- */
+.header__fixed{
+    @include flexCenter(row);
+    justify-content: space-between;
+    @include size(auto, 100vw);
+    position: fixed;
+    z-index: 5;
+    background-color:$primary-color;
+    padding: 10px 5% 5px 5%;
+}
+
+.header__logo{
+        width: auto;
+        min-width: 150px;
+        max-width: 50%;
+}
+
+.header__fiexed__tools{
+    @include flexCenter(row);
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    @include size(100%, 100%);
+}
+
+/* ----------------------------BARRA DE NAVEGACION */    
+.header__menu{
+    width: 80%;
+    right: 1%;
+    padding: 1%;
+    display: none;
+    ul{
+        @include flexCenter(row);
+        justify-content: space-between;
+        list-style: none;
+        text-decoration: none;
+        font-family: $font-family1;
+        font-size: small;
+        margin: 2px;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.header__menu__item{
+    padding: 0 2%;
+    a{
+        color: white;
+        text-decoration: none;
+      
+        &:hover{
+            color: $a-darkGreen-hoven;
+            text-decoration: underline;
+        }
+    } 
+    #selected{
+            color: $a-darkGreen-selected;
+            @include size(auto, 100%);
+            border-radius: 10PX;  
+    }
+} 
+
+/* -------------------------BARRA DE NAVEGACION DROPDOWN */  
+.header__dropdownMenu{
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border: none;  
+    &:hover{
+        background:$btn-darkGreen-hoven; 
+    }
+    &:focus{
+        background: transparent;
+    }
+}
+
+.header__dropdownMenu__nav{
+    background-color: $dropdownMenu-backround;
+    width: 50%;
+    text-align: center;
+    border: solid 1px #424b37;
+    a{
+        text-decoration: none; 
+    }
+}
+
+/* ----------------BOTONES DEL DROPDOWN */
+.header__dropdownMenu__nav__linkBtn{
+    padding: 1%;
+    width: 70%;
+    border-radius: 15px;
+    margin: 1% 15%;
+    color: #fff;
+    &:hover{
+        background-color: $btn-darkGreen-hoven;
+        color: #fff !important;    
+    }
+    &#selected{
+        color:$a-darkGreen-selected;
+    }
+}
+
+.header__dropdownMenu__nav__loginBtn{
+    padding: 1%;
+    width: 80%;
+    border-radius: 15px;
+    margin: 5% 10%;
+    border:solid 1px #424b37;
+    background-color: $btn-darkGreen;
+    color: white;
+    &:hover{
+        background-color: $btn-darkGreen-hoven;
+        color: white;
+    }
+   
+}
+
+
+/* -------------------BARRA DE BUSQUEDA DEL HEADER */
+.header__searchBar{
+    width: 40%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: $font-family1;
+    font-size: small;
+    right: 0;
+    background-color: $SearchBar-color;
+    border: solid 1px white;
+    border-radius: 20px;
+    transition: all 0.2s ease-in;
+    &:hover{
+        background-color: $SearchBar-color-hoven;
+    }
+    &:focus{
+        width: 60%;
+    }
+}
+
+.header__searchButton{
+    font-family: $font-family1;
+    font-weight: 600;
+    font-size: small;
+    padding: 5px 10px;
+    color: white;
+    border: solid 1px white;
+    border-radius: 20px;
+    background-color: $SearchBtn-color;
+    cursor: pointer;
+    display: none;
+    order: 6;
+    &:hover{
+        background-color: $SearchBtn-color-hoven;
+    }
+}
+
+/* ----------------------------------------LOGIN */
+.header__loginButton{
+    display: none;
+    padding: 5px 10px;
+    border-radius: 30px;
+    border:solid 1px #424b37;
+    background-color:$btn-darkGreen;
+    color: white;
+    font-family: $font-family1;
+    font-size: small;
+    cursor: pointer;
+    display: none;
+    &:hover{
+        background-color:$btn-darkGreen-hoven;
+    }
+}
+
+/* -------------------------ICONOS MENU Y CARRITO*/
+.fa-bars{
+    color: #fff;
+    padding: 0 2%;
+}
+.fa-cart-shopping{
+    color: #fff;
+    margin: 0 2% 0 0;
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+/* ----------------------------------------------------------------- */
+/* -------------------------------------------INFORMACION DEL HEADER */
+/* ----------------------------------------------------------------- */
+.header__info{
+    background-color: $primary-color;
+    grid-area: headerInfo;
+    @include size(300px, 100%);
+    margin-top: 50px;
+    padding: 5% 5%;
+}
+
+.header__info__tittle{
+    animation: Aparecer-desde-izquierda 0.5s ease-in;
+    color: white;
+    text-align: center;
+    font-family: $font-family1;
+    font-weight: 400;
+    font-size: 250%;
+    line-height: 100%;
+}
+
+.header__info__p {
+    animation: Aparecer-desde-izquierda 0.5s ease-in;
+    color: white;
+    text-align: center;
+    font-size: 120%;
+    padding-top: 1%;
+}
+
+/* ----------------------------------------------------------------- */
+/* -----------------------------------IMAGENES DE PORTADA DEL HEADER */
+/* ----------------------------------------------------------------- */
+.header__imgs{
+    grid-area: headerImgs;
+    padding: 0%;
+    position: absolute;
+    top: 285px;
+    .imgs{
+        width: 100%;
+        padding: 0 10%;
+    }
+}
+
+/* ----------------------------------------------------------------- */
+/* ----------------------------------------BOTONES BUY NOW Y EXPLORE */
+/* ----------------------------------------------------------------- */
+.header__buttons{
+    margin-top: 20%;
+    grid-area: headerButtons;
+    padding: 1% 5%;
+}
+
+.header__buyNowButton{
+    width: 100%;
+    padding: 15px 0;
+    margin: 1% 0;
+    border-radius: 30px;
+    border:solid 1px #424b37;
+    background-color: $btn-darkGreen;
+    color: white;
+    font-weight:600;
+    cursor: pointer;
+    &:hover{
+        background-color: $btn-darkGreen-hoven;
+    }
+}
+
+.header__ExploreButton{
+    width: 100%;
+    padding: 15px 0;
+    margin: 1% 0;
+    border-radius: 30px;
+    border:solid 1px #424b37;
+    color: $btn-darkGreen;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight:600;
+    &:hover{
+        background-color: $btn-lightGreen-hoven;
+        color: #fff;
+    }
+}
+
+/* -------------------------BORDE DEL HEADER*/
+.header__waves{
+    width: 100vw;
+    padding-top: 50px;
+}

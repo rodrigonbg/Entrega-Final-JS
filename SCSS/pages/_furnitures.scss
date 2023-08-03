@@ -1,0 +1,20 @@
+.main__furnituresContainer{
+    margin: $margin-mobile-container; 
+}
+
+
+
+
+/* -----------------TITULOS Y TEXTOS*/
+main#furnitures{
+    h1{/* Titulos H1 */
+        font: $h1-mobile;
+        margin: 20px 0 ;
+        color: black;
+        text-align: center;
+        width: 100%;
+    }
+    h2{
+        font: $h2-mobile;
+    }
+}

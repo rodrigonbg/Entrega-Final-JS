@@ -1,0 +1,58 @@
+/* ---------------------------MENSAJES CON TOASTIFY */
+.mensajeToastify{
+    border-radius: 50px;
+}
+
+.agregado{
+    background:linear-gradient(to right, $primary-color, #C2C2C2);
+}
+
+.quitado{
+    background:linear-gradient(to right, rgb(140, 50, 50), #C2C2C2);
+}
+
+
+/* ---------------------------MENSAJES CON SWEET ALERT */
+
+.btnConfirm{
+    background: $primary-color !important;
+    border-radius: 50px !important;
+    &:hover{
+        background: #6b7a56 !important;
+    }
+    &:active{
+        transform: scale(1.1);
+    }
+}
+
+.btnDeny{
+    background: #989797 !important;
+    border-radius: 50px !important;
+    &:hover{
+        background: #565656 !important;
+        color: white !important;
+    }
+    &:active{
+        transform: scale(1.1);
+    }
+}
+
+.iconQuestion{
+    color: $primary-color !important;
+    border-color: $primary-color !important;
+}
+
+.titleQuestion{
+    color: $primary-color !important;
+    font-family: $font-family2 !important;
+}
+
+.titleSuccess{
+    color: $primary-color !important;
+    font-family: $font-family2 !important;
+}
+
+.titleError{
+    color: #f27474 !important;
+    font-family: $font-family2 !important;
+}
