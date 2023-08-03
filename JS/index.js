@@ -100,7 +100,23 @@ function crearItems(productos){ /* funcion que crea los items en index */
     activarItemsBtnAdd() /* Luego de creados las tarjetas, activo los botones */
 }
 
+function cargarProductos(){
+    fetch(URL)
+        .then((result)=> result.json())
+        .then((items)=> productos.push(...items))
+        .then(()=> crearItems(productos))
+        .catch(()=>{
+            let index = document.querySelector(".main__indexContainer")
+            index.innerHTML = `<div class="cardSinCoindicencias">
+                                    <div class="mensaje">
+                                        <img src="Iconos/caraTriste.png" alt="">
+                                        <p>Estamos teniendo problemas con el servidor.</p>
+                                        <p>Por favor, vuelva a intentarlo a la brevedad.</p>
+                                    </div>
+                                </div>`
+        })
+}
 
 
 /* EJECUCIONES */
-crearItems(productos);
+cargarProductos()

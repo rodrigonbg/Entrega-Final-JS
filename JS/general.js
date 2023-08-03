@@ -1,5 +1,5 @@
 /* Lista de productos */
-const productos=[ 
+/* const productos=[ 
     {id:1, nombre:"Maceta", descripcion:"", img:"Imagenes/Productos/Ofertas/MacetasNegras.jpg", precio:1000, onSale:true, descuento:50, stock:10, alt:"Macetas negras", cantiadadEnCarrito:0},
     {id:2, nombre:"Maceta", descripcion:"", img:"Imagenes/Productos/Ofertas/MacetasBlancas.jpg", precio:1000, onSale:true, descuento:30, stock:10, alt:"Macetas blancas", cantiadadEnCarrito:0},
     {id:3, nombre:"Mesita", descripcion:"", img:"Imagenes/Productos/Ofertas/Mesita.jpg", precio:1699, onSale:true, descuento:29, stock:15, alt:"Mesita de madera", cantiadadEnCarrito:0},
@@ -17,7 +17,8 @@ const productos=[
     {id:15, nombre:"Estantería", descripcion:"", img:"Imagenes/Productos/Destacados/Rack-estanteria.png", precio:2599, onSale:false, descuento:0, stock:10, alt:"Estantería", cantiadadEnCarrito:0},
     {id:16, nombre:"Mesa de madera", descripcion:"", img:"Imagenes/Productos/Destacados/Mesa.png", precio:15999, onSale:false, descuento:0, stock:10, alt:"Mesa de madera", cantiadadEnCarrito:0},
     {id:17, nombre:"Cajonera", descripcion:"", img:"Imagenes/Productos/Destacados/Cajonera.png", precio:3699, onSale:false, descuento:0, stock:10, alt:"Cajonera", cantiadadEnCarrito:0}
-];
+]; */
+
 
 
 /* FUNCINES PARA FUNCIONALIDADES DEL CARRITO */
@@ -173,6 +174,8 @@ function aunNoDesarrollado(){
 
 
 /* EJECUCIONES */
+const URL = "JS/productos.json"
+const productos = []
 let carrito = recuperarCarrito()
 acutalizarContadorCarrito()
 activarBuscadorHeader()
